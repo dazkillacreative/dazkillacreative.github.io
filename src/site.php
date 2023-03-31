@@ -1330,79 +1330,10 @@ use yii\helpers\Url;
     <script src="css/js/countdown.js"></script>
     <script src="css/js/autoptimize_400b78a6e1c7a2c6623c843b2a77a112.js"></script>
     <script>
-        window.addCommentEntry = function(row) {
-            const li = document.createElement('li')
-            li.className ="comment even thread-even depth-1 wdp-item-comment";
-            // li.id="wdp-item-comment-44986" data-likes="0">
-            document.querySelector('#wdp-container-comment-59554').append(li)
-
-            let date = new Date(row.created_at)
-            date.setUTCHours(date.getUTCHours() + 7)
-            // console.info({row, date})
-
-            let d = date.getUTCDate()
-            let m = date.getUTCMonth() + 1
-            let h = date.getUTCHours()
-
-            if (d < 10) d = '0'+d
-            if (m < 10) m = '0'+m
-            if (h < 10) h = '0'+h
-
-            date = ''+ d +'/'+ m +'/'
-                 + date.getFullYear() +' '
-                 + h + row.created_at.slice(13,19)
-            const [author, status] = row.body.slice(0, row.body.indexOf('\n')).split(':')
-            li.innerHTML = `<div id="wdp-comment-44986" class="wdp-comment wdp-clearfix">
-                <div class="wdp-comment-avatar">
-                    <img alt="" src="https://undangandigital.id/wp-content/uploads/letter-avatar/b737829c823417334259e45f6f6ebbae.svg" srcset="https://undangandigital.id/wp-content/uploads/letter-avatar/85741a63e39df00f3c33ceefdd7b1a4e.svg 2x" class="avatar avatar-96 photo avatar-default" height="96" width="96" loading="lazy">
-                </div>
-                <div class="wdp-comment-content">
-                    <div class="wdp-comment-info">
-                        <a class="wdp-commenter-name" title="user 2">${author}</a>
-                        <span class="wdp-post-author"><i class="fas fa-check-circle"></i> ${status}</span>
-                        <br>
-                        <span class="wdp-comment-time">
-                            <i class="far fa-clock"></i>
-                            ${date}
-                        </span>
-                    </div>
-                    <div class="wdp-comment-text">
-                        <p>${ row.body.slice(row.body.indexOf('\n')) }</p>
-                    </div>
-                </div>
-            </div>`;
-        }
-
         addEventListener('DOMContentLoaded', e => {
             const qs = new URLSearchParams(location.search)
             const namatamu = qs.get('to')
             document.querySelector('#namatamu').innerHTML = namatamu;
-
-            fetch('<?= Url::base() ?>/site/get-comments').then(r => r.json()).then(data => {
-                data.map(addCommentEntry)
-            })
-
-            document.querySelector('#submit-59554').addEventListener('click', e => {
-                const body = String('')
-                    + document.querySelector('[name="author"]').value +':'
-                    + document.querySelector('[name="konfirmasi"]').value +'\n'
-                    + document.querySelector('[name="comment"]').value
-                
-                fetch('<?= Url::base() ?>/site/post-comment', {
-                    headers: {'content-type': 'application/x-www-form-urlencoded'},
-                    body: 'body='+ body, method: 'post',
-                }).then(r => r.json()).then(data => {
-                    let date = new Date()
-                    let m = date.getUTCMonth() + 1
-                    let d = date.getUTCDate()
-                    let h = date.getUTCHours()
-                    if (m < 10) m = '0'+m;
-                    if (d < 10) d = '0'+d;
-                    if (h < 10) h = '0'+h;
-                    const created_at = ''+ date.getFullYear() +'-'+ m +'-'+ d +'T'+ h + date.toString().slice(18,24) +'Z'
-                    addCommentEntry({created_at, body})
-                })
-            })
         })
     </script>
 </body>
