@@ -16,13 +16,13 @@ class SiteController extends \yii\web\Controller
 
     public function actionIndex()
     {
-        $invite = [];
+        $nama = $title = $alamat = null;
+        $invite = compact('nama', 'title', 'alamat');
         $invites = $this->getInvites();
         $nama = $_GET['to'] ??null;
 
         foreach ($invites as $i => $row) {
             if (strpos($row, "$nama::") === 0) {
-                $nama = $title = $alamat = null;
                 @list($nama, $title, $alamat) = explode('::', $row);
                 $invite = compact('nama', 'title', 'alamat');
                 break;
@@ -62,7 +62,7 @@ class SiteController extends \yii\web\Controller
             const title = prompt("Titel:\nKeluarga/Bapak/Ibu/Saudara/Saudari/Team");
             const nama = prompt("Nama:");
             const alamat = prompt("Alamat");
-            const link = `'. Url::base(true) .'?to=`+ nama;
+            const link = `'. Url::base(true) .'?to=`+ nama.replaceAll(" ","+");
 
             fetch(`'. Url::base() .'/site/create-invite`, {
 				headers: {"content-type": "application/x-www-form-urlencoded"},

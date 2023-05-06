@@ -1,7 +1,7 @@
 <?php
 
-// defined('YII_DEBUG') or define('YII_DEBUG', true);
-// defined('YII_ENV') or define('YII_ENV', 'dev');
+defined('YII_DEBUG') or define('YII_DEBUG', getenv('APP_ENV') !== 'production');
+defined('YII_ENV') or define('YII_ENV', in_array(getenv('APP_ENV'), ['dev','development']) ? 'dev' : 'prod');
 
 
 require __DIR__.'/../vendor/autoload.php';
