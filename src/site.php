@@ -2089,7 +2089,7 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 		const qs = new URLSearchParams(location.search)
 		const nama = qs.get('to')
 
-		if (namatamu) {
+		if (nama) {
 			title = 'Bapak/Ibu/Saudara/i'
 			alamat = 'Tempat'
 		}
