@@ -2086,10 +2086,19 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 	}
 
 	addEventListener('DOMContentLoaded', e => {
-		const [title, nama, alamat] = atob(location.search.slice(1)).split('::')
+		const qs = new URLSearchParams(location.search)
+		const nama = qs.get('to')
+
+		if (nama) {
+			title = 'Bapak/Ibu/Saudara/i'
+			alamat = 'Tempat'
+		}
+		else {
+			const [title, nama, alamat] = atob(location.search.slice(1)).split('::')
+		}
 		document.querySelector('#titletamu').innerHTML = title
 		document.querySelector('#namatamu').innerHTML = nama
-		document.querySelector('#alamat').innerHTML = `di ${alamat||'Tempat'}.`
+		document.querySelector('#alamat').innerHTML = `di ${alamat}.`
 
 		fetch('<?= Url::base() ?>/site/get-comments').then(r => r.json()).then(data => data.map(addCommentEntry))
 
