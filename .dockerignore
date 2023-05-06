@@ -1,0 +1,210 @@
+# flyctl launch added from .gitignore
+**/.history
+**/vendor
+runtime
+public/assets
+
+# flyctl launch added from runtime/.gitignore
+runtime/**/*
+!runtime/**/.gitignore
+
+# flyctl launch added from vendor/mikey179/vfsstream/.gitignore
+vendor/mikey179/vfsstream/composer.lock
+vendor/mikey179/vfsstream/nbproject
+
+# flyctl launch added from vendor/phenx/php-font-lib/.gitignore
+vendor/phenx/php-font-lib/**/.DS_Store
+vendor/phenx/php-font-lib/**/composer.lock
+vendor/phenx/php-font-lib/**/vendor
+vendor/phenx/php-font-lib/**/.idea
+vendor/phenx/php-font-lib/**/.project
+
+# flyctl launch added from vendor/phenx/php-svg-lib/.gitignore
+vendor/phenx/php-svg-lib/**/excluded
+vendor/phenx/php-svg-lib/**/gui
+vendor/phenx/php-svg-lib/**/.idea
+
+# flyctl launch added from vendor/phpoffice/phpspreadsheet/.gitignore
+vendor/phpoffice/phpspreadsheet/tests/codeCoverage
+vendor/phpoffice/phpspreadsheet/analysis
+vendor/phpoffice/phpspreadsheet/vendor
+vendor/phpoffice/phpspreadsheet/phpunit.xml
+
+## IDE support
+vendor/phpoffice/phpspreadsheet/**/*.buildpath
+vendor/phpoffice/phpspreadsheet/**/*.project
+vendor/phpoffice/phpspreadsheet/.settings
+vendor/phpoffice/phpspreadsheet/.idea
+
+# flyctl launch added from vendor/phpunit/php-code-coverage/.gitignore
+vendor/phpunit/php-code-coverage/tests/_files/tmp
+vendor/phpunit/php-code-coverage/vendor
+vendor/phpunit/php-code-coverage/composer.lock
+vendor/phpunit/php-code-coverage/.idea
+vendor/phpunit/php-code-coverage/.php_cs.cache
+
+
+# flyctl launch added from vendor/phpunit/php-file-iterator/.gitignore
+vendor/phpunit/php-file-iterator/**/build/api
+vendor/phpunit/php-file-iterator/**/build/code-browser
+vendor/phpunit/php-file-iterator/**/build/coverage
+vendor/phpunit/php-file-iterator/**/build/logs
+vendor/phpunit/php-file-iterator/**/build/pdepend
+vendor/phpunit/php-file-iterator/**/cache.properties
+vendor/phpunit/php-file-iterator/**/phpunit.xml
+
+# flyctl launch added from vendor/phpunit/php-text-template/.gitignore
+vendor/phpunit/php-text-template/composer.lock
+vendor/phpunit/php-text-template/composer.phar
+vendor/phpunit/php-text-template/.idea
+vendor/phpunit/php-text-template/vendor
+
+
+# flyctl launch added from vendor/phpunit/php-timer/.gitignore
+vendor/phpunit/php-timer/.idea
+vendor/phpunit/php-timer/vendor
+vendor/phpunit/php-timer/composer.lock
+
+
+# flyctl launch added from vendor/phpunit/php-token-stream/.gitignore
+vendor/phpunit/php-token-stream/.idea
+vendor/phpunit/php-token-stream/composer.lock
+vendor/phpunit/php-token-stream/vendor
+
+# flyctl launch added from vendor/phpunit/phpunit/.gitignore
+vendor/phpunit/phpunit/.ant_targets
+vendor/phpunit/phpunit/.idea
+vendor/phpunit/phpunit/.php_cs
+vendor/phpunit/phpunit/.php_cs.cache
+vendor/phpunit/phpunit/build/documentation
+vendor/phpunit/phpunit/build/logfiles
+vendor/phpunit/phpunit/build/phar
+vendor/phpunit/phpunit/build/phpdox
+vendor/phpunit/phpunit/build/*.phar
+vendor/phpunit/phpunit/build/*.phar.asc
+vendor/phpunit/phpunit/build/binary-phar-autoload.php
+vendor/phpunit/phpunit/cache.properties
+vendor/phpunit/phpunit/composer.lock
+vendor/phpunit/phpunit/tests/TextUI/*.diff
+vendor/phpunit/phpunit/tests/TextUI/*.exp
+vendor/phpunit/phpunit/tests/TextUI/*.log
+vendor/phpunit/phpunit/tests/TextUI/*.out
+vendor/phpunit/phpunit/tests/TextUI/*.php
+vendor/phpunit/phpunit/vendor
+
+
+# flyctl launch added from vendor/phpunit/phpunit-mock-objects/.gitignore
+vendor/phpunit/phpunit-mock-objects/**/build/coverage
+vendor/phpunit/phpunit-mock-objects/**/build/logs
+vendor/phpunit/phpunit-mock-objects/**/cache.properties
+vendor/phpunit/phpunit-mock-objects/vendor
+vendor/phpunit/phpunit-mock-objects/composer.lock
+vendor/phpunit/phpunit-mock-objects/composer.phar
+vendor/phpunit/phpunit-mock-objects/.idea
+
+# flyctl launch added from vendor/sabberworm/php-css-parser/.gitignore
+vendor/sabberworm/php-css-parser/**/vendor
+
+# flyctl launch added from vendor/sebastian/code-unit-reverse-lookup/.gitignore
+vendor/sebastian/code-unit-reverse-lookup/.idea
+vendor/sebastian/code-unit-reverse-lookup/composer.lock
+vendor/sebastian/code-unit-reverse-lookup/vendor
+
+
+# flyctl launch added from vendor/sebastian/comparator/.gitignore
+vendor/sebastian/comparator/build/coverage
+vendor/sebastian/comparator/composer.lock
+vendor/sebastian/comparator/composer.phar
+vendor/sebastian/comparator/phpunit.xml
+vendor/sebastian/comparator/.idea
+vendor/sebastian/comparator/vendor
+
+# flyctl launch added from vendor/sebastian/diff/.gitignore
+vendor/sebastian/diff/.idea
+vendor/sebastian/diff/composer.lock
+vendor/sebastian/diff/vendor
+vendor/sebastian/diff/.php_cs.cache
+
+# flyctl launch added from vendor/sebastian/environment/.gitignore
+vendor/sebastian/environment/.idea
+vendor/sebastian/environment/vendor
+vendor/sebastian/environment/composer.lock
+vendor/sebastian/environment/composer.phar
+
+# flyctl launch added from vendor/sebastian/exporter/.gitignore
+vendor/sebastian/exporter/**/.idea
+vendor/sebastian/exporter/**/phpunit.xml
+vendor/sebastian/exporter/**/composer.lock
+vendor/sebastian/exporter/**/composer.phar
+vendor/sebastian/exporter/**/vendor
+vendor/sebastian/exporter/**/cache.properties
+vendor/sebastian/exporter/**/build/LICENSE
+vendor/sebastian/exporter/**/build/README.md
+vendor/sebastian/exporter/**/build/*.tgz
+
+# flyctl launch added from vendor/sebastian/global-state/.gitignore
+vendor/sebastian/global-state/**/.idea
+vendor/sebastian/global-state/**/composer.lock
+vendor/sebastian/global-state/**/composer.phar
+vendor/sebastian/global-state/**/vendor
+vendor/sebastian/global-state/**/cache.properties
+vendor/sebastian/global-state/**/phpunit.xml
+
+# flyctl launch added from vendor/sebastian/object-enumerator/.gitignore
+vendor/sebastian/object-enumerator/**/.idea
+vendor/sebastian/object-enumerator/**/composer.lock
+vendor/sebastian/object-enumerator/**/composer.phar
+vendor/sebastian/object-enumerator/**/vendor
+vendor/sebastian/object-enumerator/**/cache.properties
+vendor/sebastian/object-enumerator/**/build/LICENSE
+vendor/sebastian/object-enumerator/**/build/README.md
+vendor/sebastian/object-enumerator/**/build/*.tgz
+
+# flyctl launch added from vendor/sebastian/recursion-context/.gitignore
+vendor/sebastian/recursion-context/**/.idea
+vendor/sebastian/recursion-context/**/phpunit.xml
+vendor/sebastian/recursion-context/**/composer.lock
+vendor/sebastian/recursion-context/**/composer.phar
+vendor/sebastian/recursion-context/**/vendor
+vendor/sebastian/recursion-context/**/cache.properties
+vendor/sebastian/recursion-context/**/build/LICENSE
+vendor/sebastian/recursion-context/**/build/README.md
+vendor/sebastian/recursion-context/**/build/*.tgz
+
+# flyctl launch added from vendor/sebastian/resource-operations/.gitignore
+vendor/sebastian/resource-operations/.idea
+vendor/sebastian/resource-operations/build/arginfo.php
+
+
+# flyctl launch added from vendor/sebastian/version/.gitignore
+vendor/sebastian/version/.idea
+
+# flyctl launch added from vendor/spipu/html2pdf/.gitignore
+# Eclipse
+vendor/spipu/html2pdf/.settings
+vendor/spipu/html2pdf/.buildpath
+vendor/spipu/html2pdf/.project
+vendor/spipu/html2pdf/nbproject
+
+# PHPStorm
+vendor/spipu/html2pdf/.idea
+
+# Examples
+vendor/spipu/html2pdf/test/*.pdf
+
+# PhpUnit
+vendor/spipu/html2pdf/build
+
+# Composer
+vendor/spipu/html2pdf/bin
+vendor/spipu/html2pdf/vendor
+vendor/spipu/html2pdf/composer.lock
+
+# flyctl launch added from vendor/tecnickcom/tcpdf/.gitignore
+vendor/tecnickcom/tcpdf/**/.idea
+
+# flyctl launch added from web/assets/.gitignore
+web/assets/**/*
+!web/assets/**/.gitignore
+fly.toml
+
