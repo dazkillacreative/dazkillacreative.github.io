@@ -1,3 +1,7 @@
+<?php
+
+use yii\helpers\Url;
+?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: https://ogp.me/ns#">
 
@@ -391,7 +395,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-f400a07 animated-slow wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="f400a07" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_animation_delay&quot;:900}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default font-1">Kepada <br>Bapak/Ibu/Saudara/i</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default font-1">Kepada <br><span id="titletamu"></span></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-d9bacaf animated-slow namatamu wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="d9bacaf" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_animation_delay&quot;:900}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -399,7 +403,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="elementor-element elementor-element-2c59e70 animated-slow wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="2c59e70" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_animation_delay&quot;:900}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default font-1">di Tempat.</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default font-1" id="alamat"></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-862fb5c elementor-align-center song animated-slow wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-button" data-id="862fb5c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:1900}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
@@ -1161,13 +1165,13 @@ Jl. Babakan Rancamanyar No.22a Rancamanyar</span>		</div>
 														<input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-xs  elementor-field-textual" placeholder="Nama" required="required" aria-required="true">
 											</div>
 								<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
-												<label for="form-field-email" class="elementor-field-label elementor-screen-only">
-								Ucapan							</label>
-						<textarea class="elementor-field-textual elementor-field  elementor-size-xs" name="form_fields[email]" id="form-field-email" rows="4" placeholder="Berikan Ucapan dan Doa" required="required" aria-required="true"></textarea>				</div>
-								<div class="elementor-field-type-radio elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
 												<label for="form-field-message" class="elementor-field-label elementor-screen-only">
+								Ucapan							</label>
+						<textarea class="elementor-field-textual elementor-field  elementor-size-xs" name="form_fields[email]" id="form-field-message" rows="4" placeholder="Berikan Ucapan dan Doa" required="required" aria-required="true"></textarea>				</div>
+								<div class="elementor-field-type-radio elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
+												<label class="elementor-field-label elementor-screen-only">
 								Kehadiran							</label>
-						<div class="elementor-field-subgroup  elementor-subgroup-inline"><span class="elementor-field-option"><input type="radio" value="Hadir" id="form-field-message-0" name="form_fields[message]" checked="checked"> <label for="form-field-message-0">Hadir</label></span><span class="elementor-field-option"><input type="radio" value="Tidak hadir" id="form-field-message-1" name="form_fields[message]"> <label for="form-field-message-1">Tidak Hadir</label></span></div>				</div>
+						<div class="elementor-field-subgroup  elementor-subgroup-inline"><span class="elementor-field-option"><input type="radio" value="Hadir" id="form-field-confirm-0" name="form_fields[message]" checked="checked"> <label for="form-field-confirm-0">Hadir</label></span><span class="elementor-field-option"><input type="radio" value="Tidak hadir" id="form-field-confirm-1" name="form_fields[message]"> <label for="form-field-confirm-1">Tidak Hadir</label></span></div>				</div>
 								<div class="elementor-field-type-select elementor-field-group elementor-column elementor-field-group-jumlahhadir elementor-col-100">
 												<label for="form-field-jumlahhadir" class="elementor-field-label elementor-screen-only">
 								Jumlah Hadir							</label>
@@ -1180,7 +1184,7 @@ Jl. Babakan Rancamanyar No.22a Rancamanyar</span>		</div>
 		</div>
 						</div>
 								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-80 e-form__buttons">
-					<button type="submit" class="elementor-button elementor-size-xs">
+					<button type="submit" class="elementor-button elementor-size-xs" id="submit-comment">
 						<span >
 															<span class="elementor-align-icon-left elementor-button-icon">
 									<i aria-hidden="true" class="far fa-envelope-open"></i>																	</span>
@@ -1210,7 +1214,9 @@ Jl. Babakan Rancamanyar No.22a Rancamanyar</span>		</div>
         
     <div class='cui-wrap-submit cui-clearfix'><p class='form-submit'><span class="cui-hide">Do not change these fields following</span><input type="text" class="cui-hide" name="name" value="username"><input type="text" class="cui-hide" name="nombre" value=""><input type="text" class="cui-hide" name="form-cui" value=""><input type="button" class="cui-form-btn cui-cancel-btn" value="Cancel"><input name='submit' id='submit-73263' value='Send →' type='submit' /><input type='hidden' name='commentpress' value='true' /><input type='hidden' name='comment_post_ID' value='73263' id='comment_post_ID' />
 <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
-</p></div></form></div></div><!--.cui-container-form--></div><!--.cui-clearfix cui-relative--></div><!--.cui-wrap-form--><div id='cui-comment-status-73263'  class='cui-comment-status'></div><div id='cui-box' class='cui-box'><ul id='cui-container-comment-73263' class='cui-container-comments cui-order-DESC  cui-has-15-comments cui-multiple-comments' data-order='DESC'></ul></div><div class='cui-holder-73263 cui-holder'></div></div><!--.cui-wrap-comments--></div><!--.cui-wrapper-->            <style>
+</p></div></form></div></div><!--.cui-container-form--></div><!--.cui-clearfix cui-relative--></div><!--.cui-wrap-form--><div id='cui-comment-status-73263'  class='cui-comment-status'></div><div id='cui-box' class='cui-box'>
+<ul id='cui-container-comment-73263' class='cui-container-comments cui-order-DESC  cui-has-15-comments cui-multiple-comments' data-order='DESC'></ul>
+</div><div class='cui-holder-73263 cui-holder'></div></div><!--.cui-wrap-comments--></div><!--.cui-wrapper-->            <style>
                 .cui-wrapper .cui-holder {
                     display: block !important;
                 }
@@ -2021,91 +2027,105 @@ var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
 var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"};
 /* ]]> */
 </script>
+
 <script>
-                addEventListener('DOMContentLoaded', e => {
-            const qs = new URLSearchParams(location.search)
-            const namatamu = qs.get('to')
-            document.querySelector('#namatamu').innerHTML = namatamu;
-        })
-    </script>
-	<script>
-        window.addCommentEntry = function(row) {
-            const li = document.createElement('li')
-            li.className ="comment even thread-even depth-1 wdp-item-comment";
-            // li.id="wdp-item-comment-44986" data-likes="0">
-            document.querySelector('#wdp-container-comment-59554').append(li)
+	window.addCommentEntry = function(row) {
+		const li = document.createElement('li')
+		li.className ="comment even thread-even depth-1 cui-item-comment";
+		document.querySelector('#cui-container-comment-73263').append(li)
+		document.querySelector('#cui-container-comment-73263').style.display = 'block' // show comments
+		document.querySelector('#cui-comment-status-73263').style.display = 'none' // hide loading
 
-            let date = new Date(row.created_at)
-            date.setUTCHours(date.getUTCHours() + 7)
-            // console.info({row, date})
+		let date = new Date(row.created_at)
+		date.setUTCHours(date.getUTCHours() + 7)
+		console.info({row, date})
 
-            let d = date.getUTCDate()
-            let m = date.getUTCMonth() + 1
-            let h = date.getUTCHours()
+		let d = date.getUTCDate()
+		let m = date.getUTCMonth() + 1
+		let h = date.getUTCHours()
 
-            if (d < 10) d = '0'+d
-            if (m < 10) m = '0'+m
-            if (h < 10) h = '0'+h
+		if (d < 10) d = '0'+d
+		if (m < 10) m = '0'+m
+		if (h < 10) h = '0'+h
 
-            date = ''+ d +'/'+ m +'/'
-                 + date.getFullYear() +' '
-                 + h + row.created_at.slice(13,19)
-            const [author, status] = row.body.slice(0, row.body.indexOf('\n')).split(':')
-            li.innerHTML = `<div id="wdp-comment-44986" class="wdp-comment wdp-clearfix">
-                <div class="wdp-comment-avatar">
-                    <img alt="" src="https://undangandigital.id/wp-content/uploads/letter-avatar/b737829c823417334259e45f6f6ebbae.svg" srcset="https://undangandigital.id/wp-content/uploads/letter-avatar/85741a63e39df00f3c33ceefdd7b1a4e.svg 2x" class="avatar avatar-96 photo avatar-default" height="96" width="96" loading="lazy">
-                </div>
-                <div class="wdp-comment-content">
-                    <div class="wdp-comment-info">
-                        <a class="wdp-commenter-name" title="user 2">${author}</a>
-                        <span class="wdp-post-author"><i class="fas fa-check-circle"></i> ${status}</span>
-                        <br>
-                        <span class="wdp-comment-time">
-                            <i class="far fa-clock"></i>
-                            ${date}
-                        </span>
-                    </div>
-                    <div class="wdp-comment-text">
-                        <p>${ row.body.slice(row.body.indexOf('\n')) }</p>
-                    </div>
-                </div>
-            </div>`;
-        }
+		date = ''+ d +'/'+ m +'/'
+				+ date.getFullYear() +' '
+				+ h + row.created_at.slice(13,19)
+		const [author, jml_hadir] = row.body.slice(0, row.body.indexOf('\n')).split(':')
 
-        addEventListener('DOMContentLoaded', e => {
-            const qs = new URLSearchParams(location.search)
-            const namatamu = qs.get('to')
-            document.querySelector('#namatamu').innerHTML = namatamu;
+		const status_hadir = Boolean(jml_hadir - 0) ? `<svg xmlns="http://www.w3.org/2000/svg"
+				width="16" height="16" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round"
+				stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 20 20">
+				<path fill="#3d9a62"
+					d="M17.645 8.032c-.294-.307-.599-.625-.714-.903-.106-.256-.112-.679-.118-1.089-.012-.762-.025-1.626-.626-2.227s-1.465-.614-2.227-.626c-.41-.006-.833-.012-1.089-.118-.278-.115-.596-.42-.903-.714-.54-.518-1.152-1.105-1.968-1.105-.816 0-1.428.587-1.968 1.105-.307.294-.625.599-.903.714-.256.106-.679.112-1.089.118-.762.012-1.626.025-2.227.626s-.614 1.465-.626 2.227c-.006.41-.012.833-.118 1.089-.115.278-.42.596-.714.903C1.837 8.572 1.25 9.184 1.25 10c0 .816.587 1.428 1.105 1.968.294.307.599.625.714.903.106.256.112.679.118 1.089.012.762.025 1.626.626 2.227s1.465.614 2.227.626c.41.006.833.012 1.089.118.278.115.596.42.903.714.54.518 1.152 1.105 1.968 1.105.816 0 1.428-.587 1.968-1.105.307-.294.625-.599.903-.714.256-.106.679-.112 1.089-.118.762-.012 1.626-.025 2.227-.626s.614-1.465.626-2.227c.006-.41.012-.833.118-1.089.115-.278.42-.596.714-.903.518-.54 1.105-1.152 1.105-1.968 0-.816-.587-1.428-1.105-1.968Zm-3.343-2.461a.882.882 0 0 0-1.222.256l-4.26 6.509-2.036-1.885a.885.885 0 0 0-1.2 1.297l2.815 2.604c.01.009.023.011.033.02.025.02.04.048.067.067.037.025.08.03.121.048a.86.86 0 0 0 .145.058.817.817 0 0 0 .147.023.883.883 0 0 0 .212-.003.89.89 0 0 0 .086-.02.887.887 0 0 0 .247-.103l.039-.028c.052-.036.108-.062.152-.11.031-.034.045-.078.071-.116l.003-.004 4.835-7.389a.89.89 0 0 0-.255-1.224Z" />
+			</svg>`
+			: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 20 20"><path fill="#d90a11" d="M17.645 8.032c-.294-.307-.599-.625-.714-.903-.106-.256-.112-.679-.118-1.089-.012-.762-.025-1.626-.626-2.227s-1.465-.614-2.227-.626c-.41-.006-.833-.012-1.089-.118-.278-.115-.596-.42-.903-.714-.54-.518-1.152-1.105-1.968-1.105-.816 0-1.428.587-1.968 1.105-.307.294-.625.599-.903.714-.256.106-.679.112-1.089.118-.762.012-1.626.025-2.227.626s-.614 1.465-.626 2.227c-.006.41-.012.833-.118 1.089-.115.278-.42.596-.714.903C1.837 8.572 1.25 9.184 1.25 10c0 .816.587 1.428 1.105 1.968.294.307.599.625.714.903.106.256.112.679.118 1.089.012.762.025 1.626.626 2.227s1.465.614 2.227.626c.41.006.833.012 1.089.118.278.115.596.42.903.714.54.518 1.152 1.105 1.968 1.105.816 0 1.428-.587 1.968-1.105.307-.294.625-.599.903-.714.256-.106.679-.112 1.089-.118.762-.012 1.626-.025 2.227-.626s.614-1.465.626-2.227c.006-.41.012-.833.118-1.089.115-.278.42-.596.714-.903.518-.54 1.105-1.152 1.105-1.968 0-.816-.587-1.428-1.105-1.968Zm-3.94-1.737a1 1 0 0 0-1.418 0L10 8.592 7.713 6.295a1.002 1.002 0 0 0-1.418 1.418L8.592 10l-2.297 2.287a.998.998 0 0 0 0 1.418 1 1 0 0 0 1.418 0L10 11.408l2.287 2.297a.998.998 0 0 0 1.418 0 1 1 0 0 0 0-1.418L11.408 10l2.297-2.287a.998.998 0 0 0 0-1.418Z"></path></svg>`;
 
-            fetch('<?= Url::base() ?>/site/get-comments').then(r => r.json()).then(data => {
-                data.map(addCommentEntry)
-            })
+		li.innerHTML = `<div id="cui-comment-43202" class="cui-comment cui-clearfix">
+			<div class="cui-comment-avatar">
+				<img alt=""
+					src="https://avatar.oxro.io/avatar.svg?name=${ author }&background=fbfbfb&color=7D7D7D&length=1&caps=1&fontSize=200&bold=true" />
+				<img src="">
+			</div><!--.cui-comment-avatar-->
 
-            document.querySelector('#submit-59554').addEventListener('click', e => {
-                const body = String('')
-                    + document.querySelector('[name="author"]').value +':'
-                    + document.querySelector('[name="konfirmasi"]').value +'\n'
-                    + document.querySelector('[name="comment"]').value
-                
-                fetch('<?= Url::base() ?>/site/post-comment', {
-                    headers: {'content-type': 'application/x-www-form-urlencoded'},
-                    body: 'body='+ body, method: 'post',
-                }).then(r => r.json()).then(data => {
-                    let date = new Date()
-                    let m = date.getUTCMonth() + 1
-                    let d = date.getUTCDate()
-                    let h = date.getUTCHours()
-                    if (m < 10) m = '0'+m;
-                    if (d < 10) d = '0'+d;
-                    if (h < 10) h = '0'+h;
-                    const created_at = ''+ date.getFullYear() +'-'+ m +'-'+ d +'T'+ h + date.toString().slice(18,24) +'Z'
-                    addCommentEntry({created_at, body})
-                })
-            })
-        })
-    </script>
+			<div class="cui-comment-content">
+				<div class="cui-comment-info">
+					<a class='cui-commenter-name' title='${ author }'>${ author }</a>
+					<span class="cui-post-author-mark cui-post-author-hadir">${ status_hadir }</span>
+				</div><!--.cui-comment-info-->
+				<div class="cui-comment-text">
+					<p>${ row.body.slice(row.body.indexOf('\n')) }</p>
+				</div><!--.cui-comment-text-->
+
+				<div class="cui-comment-actions">
+					<span class="cui-comment-time"><i class="far fa-clock"></i> ${ date }</span>
+				</div><!--.cui-comment-actions-->
+
+			</div><!--.cui-comment-content-->
+			</div><!--.cui-comment-->`;
+	}
+
+	addEventListener('DOMContentLoaded', e => {
+		const [title, nama, alamat] = atob(location.search.slice(1)).split('::')
+		document.querySelector('#titletamu').innerHTML = title
+		document.querySelector('#namatamu').innerHTML = nama
+		document.querySelector('#alamat').innerHTML = `di ${alamat||'Tempat'}.`
+
+		fetch('<?= Url::base() ?>/site/get-comments').then(r => r.json()).then(data => data.map(addCommentEntry))
+
+		document.querySelector('#submit-comment').addEventListener('click', e => {
+			e.preventDefault()
+
+			const konfirm = document.querySelector('#form-field-confirm-0').checked
+			const jml_hadir = konfirm ? document.querySelector('#form-field-jumlahhadir').value : 0
+
+			const body = String('')
+				+ document.querySelector('#form-field-name').value +`:${jml_hadir}\n`
+				+ document.querySelector('#form-field-message').value
+
+			document.querySelector('.elementor-field-group-jumlahhadir').style.display = 'none'
+
+			return !fetch('<?= Url::base() ?>/site/post-comment', {
+				headers: {'content-type': 'application/x-www-form-urlencoded'},
+				body: 'body='+ body, method: 'post',
+			}).then(r => r.json()).then(data => {
+				let date = new Date()
+				let m = date.getUTCMonth() + 1
+				let d = date.getUTCDate()
+				let h = date.getUTCHours()
+				if (m < 10) m = '0'+m;
+				if (d < 10) d = '0'+d;
+				if (h < 10) h = '0'+h;
+				const created_at = ''+ date.getFullYear() +'-'+ m +'-'+ d +'T'+ h + date.toString().slice(18,24) +'Z'
+				addCommentEntry({created_at, body})
+			})
+		})
+	})
+</script>
+
 <script type='text/javascript' src='js/frontend.min7d4c.js?ver=1.7.0' id='wpforms-elementor-js'></script>
-<div class="pafe-break-point" data-pafe-break-point-md="768" data-pafe-break-point-lg="1025" data-pafe-ajax-url="https://ruanginvitation.id/wp-admin/admin-ajax.php"></div><div data-pafe-form-builder-tinymce-upload="https://ruanginvitation.id/wp-content/plugins/piotnet-addons-for-elementor-pro/inc/tinymce/tinymce-upload.php"></div><div data-pafe-ajax-url="https://ruanginvitation.id/wp-admin/admin-ajax.php"></div>	</body>
+<div class="pafe-break-point" data-pafe-break-point-md="768" data-pafe-break-point-lg="1025" data-pafe-ajax-url="https://ruanginvitation.id/wp-admin/admin-ajax.php"></div><div data-pafe-form-builder-tinymce-upload="https://ruanginvitation.id/wp-content/plugins/piotnet-addons-for-elementor-pro/inc/tinymce/tinymce-upload.php"></div><div data-pafe-ajax-url="https://ruanginvitation.id/wp-admin/admin-ajax.php"></div>
+</body>
 
 <!-- Mirrored from ruanginvitation.id/ri12-spesial/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Apr 2023 21:14:55 GMT -->
 </html>

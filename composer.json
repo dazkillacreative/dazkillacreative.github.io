@@ -1,0 +1,17 @@
+{
+    "require": {
+        "yiisoft/yii2-debug": "~2.1.0",
+        "yiisoft/yii2-httpclient": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    }
+}
+
