@@ -2090,8 +2090,8 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 		const nama = qs.get('to')
 
 		if (nama) {
-			title = 'Bapak/Ibu/Saudara/i'
-			alamat = 'Tempat'
+			title = '<?= $invite['title'] ?: 'Bapak/Ibu/Saudara/i' ?>'
+			alamat = '<?= $invite['alamat'] ?: 'Tempat' ?>'
 		}
 		else {
 			const [title, nama, alamat] = atob(location.search.slice(1)).split('::')
