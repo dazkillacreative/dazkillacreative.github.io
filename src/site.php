@@ -1176,24 +1176,25 @@ Jl. Babakan Rancamanyar No.22a Rancamanyar</span>		</div>
 												<label for="form-field-jumlahhadir" class="elementor-field-label elementor-screen-only">
 								Jumlah Hadir							</label>
 								<div class="elementor-field elementor-select-wrapper ">
-			<select name="form_fields[jumlahhadir]" id="form-field-jumlahhadir" class="elementor-field-textual elementor-size-xs">
+							<select name="form_fields[jumlahhadir]" id="form-field-jumlahhadir" class="elementor-field-textual elementor-size-xs">
 									<option value="1" selected="selected">1 Orang</option>
 									<option value="2">2 Orang</option>
 									<option value="3">3 Orang</option>
 							</select>
-		</div>
+							</div>
 						</div>
-								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-80 e-form__buttons">
-								<button type="submit" class="elementor-button elementor-size-xs" id="submit-comment">
-						<span >
-															<span class="elementor-align-icon-left elementor-button-icon">
-									<i aria-hidden="true" class="far fa-envelope-open"></i>																	</span>
-																						<span class="elementor-button-text">Kirim</span>
-													</span>
-					</button>
-				</div>
-			</div>
-		</form>
+						<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-80 e-form__buttons">
+							<button type="submit" class="elementor-button elementor-size-xs" id="submit-comment">
+								<span>
+									<span class="elementor-align-icon-left elementor-button-icon">
+										<i aria-hidden="true" class="far fa-envelope-open"></i>
+									</span>
+									<span class="elementor-button-text">Kirim</span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</form>
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-d766311 wdp-sticky-section-no elementor-widget elementor-widget-weddingpress-kit2" data-id="d766311" data-element_type="widget" data-widget_type="weddingpress-kit2.default">
@@ -2090,7 +2091,7 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 
 	addEventListener('DOMContentLoaded', e => { setTimeout(_=> {
 		let qs = new URLSearchParams(location.search)
-		let title, alamat, nama = qs.get('to')
+		let btn, title, alamat, nama = qs.get('to')
 
 		if (nama) {
 			title = '<?= $invite['title'] ?? 'Bapak/Ibu/Saudara/i' ?>'
@@ -2100,10 +2101,12 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 		document.querySelector('#namatamu').innerHTML = nama
 		document.querySelector('#alamat').innerHTML = `di ${alamat}.`
 
-		fetch('<?= Url::base() ?>/site/get-comments').then(r => r.json()).then(data => data.map(addCommentEntry))
+		fetch('<?= Url::base() ?>/site/get-comments').then(r => r.json()).then(data => data.map(addCommentEntry));
 
-		document.querySelector('#submit-comment').addEventListener('click', e => {
+		(btn = document.querySelector('#submit-comment')).addEventListener('click', e => {
 			e.preventDefault()
+			btn.disabled = true
+			btn.querySelector('span.elementor-button-text').innerHTML = `Mengirim...`
 
 			const konfirm = document.querySelector('#form-field-confirm-0').checked
 			const jml_hadir = konfirm ? document.querySelector('#form-field-jumlahhadir').value : 0
@@ -2117,7 +2120,8 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 			return !fetch('<?= Url::base() ?>/site/post-comment', {
 				headers: {'content-type': 'application/x-www-form-urlencoded'},
 				body: 'body='+ body, method: 'post',
-			}).then(r => r.json()).then(data => {
+			})
+			.then(r => r.json()).then(data => {
 				let date = new Date()
 				let m = date.getUTCMonth() + 1
 				let d = date.getUTCDate()
@@ -2127,6 +2131,10 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 				if (h < 10) h = '0'+h;
 				const created_at = ''+ date.getFullYear() +'-'+ m +'-'+ d +'T'+ h + date.toString().slice(18,24) +'Z'
 				addCommentEntry({created_at, body})
+			})
+			.finally(_ => {
+				btn.disabled = false
+				btn.querySelector('span.elementor-button-text').innerHTML = `Kirim`
 			})
 		})
 	}, 3000) })
