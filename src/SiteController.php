@@ -4,10 +4,8 @@ namespace app\src;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\httpclient\Client;
+use Yii;
 
-define('TOKEN', getenv('GH_TOKEN'));
-define('URL_COMMENTS', 'https://api.github.com/repos'. getenv('GH_URL_COMMENTS') .'/comments');
-define('URL_INVITES', 'https://api.github.com/repos'. getenv('GH_URL_INVITES'));
 
 class SiteController extends \yii\web\Controller
 {
@@ -35,10 +33,10 @@ class SiteController extends \yii\web\Controller
     protected function getInvites()
     {
         $respon = (new Client)->createRequest()
-            ->setUrl(URL_INVITES)
+            ->setUrl(Yii::$app->params['gh_url_invites'])
             ->addHeaders([
                 "Accept" => "application/vnd.github+json",
-                "Authorization" => "Bearer ". TOKEN,
+                "Authorization" => "Bearer ". Yii::$app->params['gh_token'],
                 "X-GitHub-Api-Version" => "2022-11-28",
                 "User-Agent" => "blangko-app",
             ])
@@ -48,7 +46,7 @@ class SiteController extends \yii\web\Controller
         if ($respon) {
             $respon = Json::decode($respon);
 
-            if ($respon['body']) {
+            if (!empty($respon['body'])) {
                 return explode("\n", $respon['body']);
             }
         }
@@ -94,11 +92,11 @@ class SiteController extends \yii\web\Controller
         }
 
         return (new Client)->createRequest()
-            ->setUrl(URL_INVITES)
+            ->setUrl(Yii::$app->params['gh_url_invites'])
             ->setMethod('PATCH')
             ->addHeaders([
                 "Accept" => "application/vnd.github+json",
-                "Authorization" => "Bearer ". TOKEN,
+                "Authorization" => "Bearer ". Yii::$app->params['gh_token'],
                 "X-GitHub-Api-Version" => "2022-11-28",
                 "User-Agent" => "blangko-app",
                 "Content-Type" => "application/json",
@@ -114,10 +112,10 @@ class SiteController extends \yii\web\Controller
     {
         header('content-type: application/json');
         return (new Client)->createRequest()
-            ->setUrl(URL_COMMENTS)
+            ->setUrl(Yii::$app->params['gh_url_comments'])
             ->addHeaders([
                 "Accept" => "application/vnd.github+json",
-                "Authorization" => "Bearer ". TOKEN,
+                "Authorization" => "Bearer ". Yii::$app->params['gh_token'],
                 "X-GitHub-Api-Version" => "2022-11-28",
                 "User-Agent" => "blangko-app",
             ])
@@ -129,11 +127,11 @@ class SiteController extends \yii\web\Controller
     {
         header('content-type: application/json');
         return (new Client)->createRequest()
-            ->setUrl(URL_COMMENTS)
+            ->setUrl(Yii::$app->params['gh_url_comments'])
             ->setMethod('POST')
             ->addHeaders([
                 "Accept" => "application/vnd.github+json",
-                "Authorization" => "Bearer ". TOKEN,
+                "Authorization" => "Bearer ". Yii::$app->params['gh_token'],
                 "X-GitHub-Api-Version" => "2022-11-28",
                 "User-Agent" => "blangko-app",
                 "Content-Type" => "application/json",

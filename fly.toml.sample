@@ -11,6 +11,9 @@ processes = []
   GH_URL_COMMENTS = "/saung-rangon/tower-blocks/issues/2"
   GH_URL_INVITES = "/saung-rangon/tower-blocks/issues/comments/1537082923"
 
+[experimental]
+  auto_rollback = true
+
 [[services]]
   http_checks = []
   internal_port = 8080
