@@ -6,6 +6,7 @@ defined('YII_ENV') or define('YII_ENV', in_array(getenv('APP_ENV'), ['dev','deve
 $ini = is_file(__DIR__.'/../fly.toml') ? file_get_contents(__DIR__.'/../fly.toml') :null;
 $ini = $ini ? parse_ini_string(substr($ini, $start = strpos($ini, '[env]'), strpos($ini, '[experimental]') - $start)) : [];
 $ini['GH_URL'] = 'https://api.github.com/repos';
+putenv('gh_url=https://api.github.com/repos');
 
 require __DIR__.'/../vendor/autoload.php';
 require __DIR__.'/../vendor/yiisoft/yii2/Yii.php';
