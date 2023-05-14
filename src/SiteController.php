@@ -1,6 +1,7 @@
 <?php
 namespace app\src;
 
+use ArrayObject;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\httpclient\Client;
@@ -25,7 +26,9 @@ class SiteController extends \yii\web\Controller
         }
 
         if (!in_array($_SERVER['HTTP_ORIGIN'], [
+            'http://localhost:8000',
             'https://saung-rangon.github.io',
+            'https://wedding-akbar-retha.github.io',
         ])) {
             return;
         }
@@ -55,23 +58,35 @@ class SiteController extends \yii\web\Controller
     {
         $site = Yii::$app->request->get('s');
 
+        $hdrs = [
+            "Accept" => "application/vnd.github+json",
+            "Authorization" => "Bearer ". getenv($site . '_gh_token'),
+            "X-GitHub-Api-Version" => "2022-11-28",
+            "User-Agent" => "blangko-app",
+        ];
+
+        error_log('GH API Req: '.print_r([
+            'url' => $url = getenv('gh_url') . getenv($site .'_gh_url_invites'),
+            'headers' => $hdrs
+        ],1));
+
         $respon = (new Client)->createRequest()
-            ->setUrl(getenv('gh_url') . getenv($site .'_gh_url_invites'))
-            ->addHeaders([
-                "Accept" => "application/vnd.github+json",
-                "Authorization" => "Bearer ". getenv($site . '_gh_token'),
-                "X-GitHub-Api-Version" => "2022-11-28",
-                "User-Agent" => "blangko-app",
-            ])
+            ->setUrl($url)
+            ->addHeaders($hdrs)
             ->send()
             ->getContent();
 
         if ($respon) {
             $respon = Json::decode($respon);
 
+            error_log('GH API Res: '.print_r($respon, 1));    
+    
             if (!empty($respon['body'])) {
                 return explode("\n", $respon['body']);
             }
+        }
+        else {
+            error_log('GH API Res: '.$respon);
         }
 
         return [];
@@ -110,85 +125,133 @@ class SiteController extends \yii\web\Controller
             }
         }
 
-        header('content-type: application/json');
-
-        return Json::encode($invite);
+        return $this->asJson($invite);
     }
 
     public function actionCreateInvite()
     {
-        header('content-type: application/json');
-
-        $data = $this->getInvites();
+        $invites = $this->getInvites();
         $new = true;
 
-        foreach ($data as $i => $row) {
+        foreach ($invites as $i => $row) {
             if (strpos($row, $_POST['nama']."::") === 0) {
-                $data[$i] = "$_POST[nama]::$_POST[title]::$_POST[alamat]";
+                $invites[$i] = "$_POST[nama]::$_POST[title]::$_POST[alamat]";
                 $new = false;
                 break;
             }
         }
 
         if ($new) {
-            $data[] = "$_POST[nama]::$_POST[title]::$_POST[alamat]";
+            $invites[] = "$_POST[nama]::$_POST[title]::$_POST[alamat]";
         }
 
         $site = Yii::$app->request->get('s');
 
-        return (new Client)->createRequest()
-            ->setUrl(getenv('gh_url') . getenv($site .'_gh_url_invites'))
-            ->setMethod('PATCH')
-            ->addHeaders([
-                "Accept" => "application/vnd.github+json",
-                "Authorization" => "Bearer ". getenv($site . '_gh_token'),
-                "X-GitHub-Api-Version" => "2022-11-28",
-                "User-Agent" => "blangko-app",
-                "Content-Type" => "application/json",
+        $hdrs = [
+            "Accept" => "application/vnd.github+json",
+            "Authorization" => "Bearer ". getenv($site . '_gh_token'),
+            "X-GitHub-Api-Version" => "2022-11-28",
+            "User-Agent" => "blangko-app",
+            "Content-Type" => "application/json",
+        ];
+
+        error_log('GH API Req: '.print_r([
+            'url' => $url = getenv('gh_url') . getenv($site .'_gh_url_invites'),
+            'headers' => $hdrs,
+            'data' => $data = new \ArrayObject([
+                'body' => implode("\n", $invites)
             ])
-            ->setContent(Json::encode([
-                'body' => implode("\n", $data)
-            ]))
+        ],1));
+
+        $respon = (new Client)->createRequest()
+            ->setUrl($url)
+            ->setMethod('PATCH')
+            ->addHeaders($hdrs)
+            ->setContent(Json::encode($data))
             ->send()
             ->getContent();
+
+        if ($respon) {
+            $data = Json::decode($respon);
+            error_log('GH API Res: '.print_r($data, 1));
+        }
+        else {
+            error_log('GH API Res: '.$respon);
+        }
+
+        header('content-type: application/json');
+        return $respon;
     }
 
     public function actionGetComments()
     {
-        header('content-type: application/json');
-
         $site = Yii::$app->request->get('s');
 
-        return (new Client)->createRequest()
-            ->setUrl(getenv('gh_url') . getenv($site . '_gh_url_comments'))
-            ->addHeaders([
-                "Accept" => "application/vnd.github+json",
-                "Authorization" => "Bearer ". getenv($site . '_gh_token'),
-                "X-GitHub-Api-Version" => "2022-11-28",
-                "User-Agent" => "blangko-app",
-            ])
+        $hdrs = [
+            "Accept" => "application/vnd.github+json",
+            "Authorization" => "Bearer ". getenv($site . '_gh_token'),
+            "X-GitHub-Api-Version" => "2022-11-28",
+            "User-Agent" => "blangko-app",
+        ];
+
+        error_log('GH API Req: '.print_r([
+            'url' => $url = getenv('gh_url') . getenv($site .'_gh_url_comments') . '/comments',
+            'headers' => $hdrs,
+        ],1));
+
+        $respon = (new Client)->createRequest()
+            ->setUrl($url)
+            ->addHeaders($hdrs)
             ->send()
             ->getContent();
+
+        if ($respon) {
+            $data = Json::decode($respon);
+            error_log('GH API Res: '.print_r($data, 1));
+        }
+        else {
+            error_log('GH API Res: '.$respon);
+        }
+    
+        header('content-type: application/json');
+        return $respon;
     }
 
     public function actionPostComment()
     {
-        header('content-type: application/json');
-
         $site = Yii::$app->request->get('s');
 
-        return (new Client)->createRequest()
-            ->setUrl(getenv('gh_url') . getenv($site . '_gh_url_comments'))
+        $hdrs = [
+            "Accept" => "application/vnd.github+json",
+            "Authorization" => "Bearer ". getenv($site . '_gh_token'),
+            "X-GitHub-Api-Version" => "2022-11-28",
+            "User-Agent" => "blangko-app",
+            "Content-Type" => "application/json",
+        ];
+
+        error_log('GH API Req: '.print_r([
+            'url' => $url = getenv('gh_url') . getenv($site .'_gh_url_comments') . '/comments',
+            'headers' => $hdrs,
+            'data' => $_POST
+        ],1));
+
+        $respon = (new Client)->createRequest()
+            ->setUrl($url)
             ->setMethod('POST')
-            ->addHeaders([
-                "Accept" => "application/vnd.github+json",
-                "Authorization" => "Bearer ". getenv($site . '_gh_token'),
-                "X-GitHub-Api-Version" => "2022-11-28",
-                "User-Agent" => "blangko-app",
-                "Content-Type" => "application/json",
-            ])
+            ->addHeaders($hdrs)
             ->setContent(Json::encode($_POST))
             ->send()
             ->getContent();
+
+        if ($respon) {
+            $data = Json::decode($respon);
+            error_log('GH API Res: '.print_r($data, 1));
+        }
+        else {
+            error_log('GH API Res: '.$respon);
+        }
+
+        header('content-type: application/json');
+        return $respon;
     }
 }
