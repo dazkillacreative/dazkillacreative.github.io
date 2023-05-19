@@ -1,7 +1,6 @@
 <?php
 namespace app\src;
 
-use ArrayObject;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\httpclient\Client;
@@ -65,10 +64,10 @@ class SiteController extends \yii\web\Controller
             "User-Agent" => "blangko-app",
         ];
 
-        error_log('GH API Req: '.print_r([
+        Yii::debug('GH API Req: '.print_r([
             'url' => $url = getenv('gh_url') . getenv($site .'_gh_url_invites'),
             'headers' => $hdrs
-        ],1));
+        ],1), __METHOD__);
 
         $respon = (new Client)->createRequest()
             ->setUrl($url)
@@ -79,14 +78,14 @@ class SiteController extends \yii\web\Controller
         if ($respon) {
             $respon = Json::decode($respon);
 
-            error_log('GH API Res: '.print_r($respon, 1));    
+            Yii::debug('GH API Res: '.print_r($respon, 1), __METHOD__);
     
             if (!empty($respon['body'])) {
                 return explode("\n", $respon['body']);
             }
         }
         else {
-            error_log('GH API Res: '.$respon);
+            Yii::debug('GH API Res: '.$respon, __METHOD__);
         }
 
         return [];
@@ -155,13 +154,13 @@ class SiteController extends \yii\web\Controller
             "Content-Type" => "application/json",
         ];
 
-        error_log('GH API Req: '.print_r([
+        Yii::debug('GH API Req: '.print_r([
             'url' => $url = getenv('gh_url') . getenv($site .'_gh_url_invites'),
             'headers' => $hdrs,
             'data' => $data = new \ArrayObject([
                 'body' => implode("\n", $invites)
             ])
-        ],1));
+        ],1), __METHOD__);
 
         $respon = (new Client)->createRequest()
             ->setUrl($url)
@@ -173,19 +172,20 @@ class SiteController extends \yii\web\Controller
 
         if ($respon) {
             $data = Json::decode($respon);
-            error_log('GH API Res: '.print_r($data, 1));
+            Yii::debug('GH API Res: '.print_r($data, 1), __METHOD__);
         }
         else {
-            error_log('GH API Res: '.$respon);
+            Yii::debug('GH API Res: '.$respon, __METHOD__);
         }
 
-        header('content-type: application/json');
+        header('Content-Type: application/json');
         return $respon;
     }
 
     public function actionGetComments()
     {
         $site = Yii::$app->request->get('s');
+        $page = Yii::$app->request->get('page')?: 1;
 
         $hdrs = [
             "Accept" => "application/vnd.github+json",
@@ -194,10 +194,10 @@ class SiteController extends \yii\web\Controller
             "User-Agent" => "blangko-app",
         ];
 
-        error_log('GH API Req: '.print_r([
-            'url' => $url = getenv('gh_url') . getenv($site .'_gh_url_comments') . '/comments',
+        Yii::debug('GH API Req: '.print_r([
+            'url' => $url = getenv('gh_url') . getenv($site .'_gh_url_comments') . '/comments?page=' . $page,
             'headers' => $hdrs,
-        ],1));
+        ],1), __METHOD__);
 
         $respon = (new Client)->createRequest()
             ->setUrl($url)
@@ -207,13 +207,13 @@ class SiteController extends \yii\web\Controller
 
         if ($respon) {
             $data = Json::decode($respon);
-            error_log('GH API Res: '.print_r($data, 1));
+            Yii::debug('GH API Res: '.print_r($data, 1), __METHOD__);
         }
         else {
-            error_log('GH API Res: '.$respon);
+            Yii::debug('GH API Res: '.$respon, __METHOD__);
         }
     
-        header('content-type: application/json');
+        header('Content-Type: application/json');
         return $respon;
     }
 
@@ -229,11 +229,11 @@ class SiteController extends \yii\web\Controller
             "Content-Type" => "application/json",
         ];
 
-        error_log('GH API Req: '.print_r([
+        Yii::debug('GH API Req: '.print_r([
             'url' => $url = getenv('gh_url') . getenv($site .'_gh_url_comments') . '/comments',
             'headers' => $hdrs,
             'data' => $_POST
-        ],1));
+        ],1), __METHOD__);
 
         $respon = (new Client)->createRequest()
             ->setUrl($url)
@@ -245,13 +245,13 @@ class SiteController extends \yii\web\Controller
 
         if ($respon) {
             $data = Json::decode($respon);
-            error_log('GH API Res: '.print_r($data, 1));
+            Yii::debug('GH API Res: '.print_r($data, 1), __METHOD__);
         }
         else {
-            error_log('GH API Res: '.$respon);
+            Yii::debug('GH API Res: '.$respon, __METHOD__);
         }
 
-        header('content-type: application/json');
+        header('Content-Type: application/json');
         return $respon;
     }
 }
