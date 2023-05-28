@@ -303,7 +303,6 @@ var pp = {"ajax_url":"https:\/\/ruanginvitation.id\/wp-admin\/admin-ajax.php"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='js/jquery.minaf6c.js?ver=3.6.0' id='jquery-core-js'></script>
-<script src="js/countdown.js" type="text/javascript"></script>
 <script type='text/javascript' src='js/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
 <script type='text/javascript' src='js/extension.min0844.js?ver=6.4.19' id='pafe-extension-js'></script>
 <link rel="https://api.w.org/" href="https://ruanginvitation.id/wp-json/" /><link rel="alternate" type="application/json" href="https://ruanginvitation.id/wp-json/wp/v2/posts/73263" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ruanginvitation.id/xmlrpc.php?rsd" />
@@ -341,6 +340,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-top: 10px;
     margin-bottom: 0px;
 }		</style>
+
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
 <body data-rsssl=1 class="post-template post-template-elementor_canvas single single-post postid-73263 single-format-standard elementor-default elementor-template-canvas elementor-kit-6 elementor-page elementor-page-73263">
 	<!-- Google Tag Manager (noscript) -->
@@ -375,11 +375,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="elementor-element elementor-element-9eec9bb animated-slow wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="9eec9bb" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_animation_delay&quot;:900}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default font-2">Devi & Randi</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default font-2" title></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-b20cc41 animated-slow wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="b20cc41" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:1900}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default font-1">Minggu, 14 Mei 2023</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default font-1" date></h2>		</div>
 				</div>
 						</div>
 					</div>
@@ -475,7 +475,7 @@ function _0x2cda(){var _0x3abfbf=['return\x20(function()\x20','scrollTo','consol
 				</div>
 				<div class="elementor-element elementor-element-bc2dc15 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="bc2dc15" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_delay&quot;:500}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default">Devi & Randi</p>		</div>
+			<p class="elementor-heading-title elementor-size-default" title></p>		</div>
 				</div>
 				<section class="elementor-section elementor-inner-section elementor-element elementor-element-06331ba elementor-section-boxed elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="06331ba" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
 						<div class="elementor-container elementor-column-gap-no">
@@ -513,7 +513,7 @@ function _0x2cda(){var _0x3abfbf=['return\x20(function()\x20','scrollTo','consol
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-9adabd6 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="9adabd6" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"><a href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=Jody%20Syella&amp;details&amp;dates=20221022T090000/20221022T120000&amp;location=Test" target="_blank" rel="noopener">14 • MEI • 2023</a></p>		</div>
+			<p class="elementor-heading-title elementor-size-default"><a href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=Jody%20Syella&amp;details&amp;dates=20221022T090000/20221022T120000&amp;location=Test" target="_blank" rel="noopener" date></a></p>		</div>
 				</div>
 						</div>
 					</div>
@@ -603,8 +603,7 @@ function _0x2cda(){var _0x3abfbf=['return\x20(function()\x20','scrollTo','consol
                                                     data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_animation_delay&quot;:800}"
                                                     data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">D
-                                                        </h2>
+                                                        <h2 class="elementor-heading-title elementor-size-default" title_short1></h2>
                                                     </div>
                                                 </div>
                                             </div>
@@ -635,8 +634,7 @@ function _0x2cda(){var _0x3abfbf=['return\x20(function()\x20','scrollTo','consol
                                                     data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_animation_delay&quot;:800}"
                                                     data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">R
-                                                        </h2>
+                                                        <h2 class="elementor-heading-title elementor-size-default" title_short2></h2>
                                                     </div>
                                                 </div>
                                             </div>
@@ -737,22 +735,21 @@ pada acara Resepsi Pernikahan putra-putri kami</h2>		</div>
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-e9ddf18 animated-slow wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="e9ddf18" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default">Devi Arianti
-</span>		</div>
+			<span class="elementor-heading-title elementor-size-default" nama_long1></span>		</div>
 				</div>
 				<div class="elementor-element elementor-element-58e3e30 wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="58e3e30" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;zoomIn&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default"><b>Putri dari</b><br>
-Bapak Mimin Sadimin dan Ibu Sumarni</span>		</div>
+			<span class="elementor-heading-title elementor-size-default"><b>Putri dari</b></span><br>
+				<span putri_dari></span>		</div>
 				</div>
 				<div class="elementor-element elementor-element-0181415 elementor-align-right elementor-mobile-align-right wdp-sticky-section-no elementor-widget elementor-widget-button" data-id="0181415" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;zoomIn&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a href="https://instagram.com/deviariantiiiiii" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-bounce-out" role="button">
+			<a href="https://instagram.com/" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-bounce-out" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-icon elementor-align-icon-left">
 				<i aria-hidden="true" class="fab fa-instagram"></i>			</span>
-						<span class="elementor-button-text">deviariantiiiiii →</span>
+						<span class="elementor-button-text" ig1></span>
 		</span>
 					</a>
 		</div>
@@ -808,22 +805,21 @@ Bapak Mimin Sadimin dan Ibu Sumarni</span>		</div>
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-36056d5 animated-slow wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="36056d5" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default">Randi Eka Fajar
-</span>		</div>
+			<span class="elementor-heading-title elementor-size-default" nama_long2></span>		</div>
 				</div>
 				<div class="elementor-element elementor-element-3d446cf wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="3d446cf" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;zoomIn&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default"><b>Putra dari</b><br>
-Bapak Ayi Dadan dan Ibu Imas Tutih</span>		</div>
+			<span class="elementor-heading-title elementor-size-default"><b>Putra dari</b></span><br>
+				<span putra_dari></span>		</div>
 				</div>
 				<div class="elementor-element elementor-element-51aad88 elementor-align-left elementor-mobile-align-left wdp-sticky-section-no elementor-widget elementor-widget-button" data-id="51aad88" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;zoomIn&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a href="https://instagram.com/randi_efajar" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-bounce-out" role="button">
+			<a href="https://instagram.com/" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-bounce-out" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-icon elementor-align-icon-left">
 				<i aria-hidden="true" class="fab fa-instagram"></i>			</span>
-						<span class="elementor-button-text">randi_efajar →</span>
+						<span class="elementor-button-text" ig2></span>
 		</span>
 					</a>
 		</div>
@@ -906,7 +902,7 @@ Bapak Ayi Dadan dan Ibu Imas Tutih</span>		</div>
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-28d3c5b wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="28d3c5b" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default">14</span>		</div>
+			<span class="elementor-heading-title elementor-size-default" day></span>		</div>
 				</div>
 						</div>
 					</div>
@@ -916,8 +912,7 @@ Bapak Ayi Dadan dan Ibu Imas Tutih</span>		</div>
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-6712033 wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="6712033" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;zoomIn&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default">Minggu<br>
-Mei <br>2023</span>		</div>
+			<span class="elementor-heading-title elementor-size-default" weekday_month_year></span>		</div>
 				</div>
 						</div>
 					</div>
@@ -939,7 +934,7 @@ Mei <br>2023</span>		</div>
 							<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
 							<i aria-hidden="true" class="fas fa-clock"></i>						</span>
-										<span class="elementor-icon-list-text">08.00 WIB - 11.00 WIB</span>
+										<span class="elementor-icon-list-text" time></span>
 									</li>
 						</ul>
 				</div>
@@ -950,13 +945,12 @@ Mei <br>2023</span>		</div>
 				</div>
 				<div class="elementor-element elementor-element-4f18043 wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="4f18043" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;zoomIn&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default"><b>Gedung Resepsi Karya Mandiri</b> <br>
-Jl. Babakan Rancamanyar No.22a Rancamanyar</span>		</div>
+			<span class="elementor-heading-title elementor-size-default"><b venue></b> <br><span address></span></span>		</div>
 				</div>
 				<div class="elementor-element elementor-element-2b88f60 elementor-align-left elementor-mobile-align-left wdp-sticky-section-no elementor-widget elementor-widget-button" data-id="2b88f60" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;zoomIn&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a href="https://goo.gl/maps/K9ofSvBtr8arHWoX8" target="_blank" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-bounce-out" role="button">
+			<a href="" target="_blank" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-bounce-out" role="button" gmaps>
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">GOOGLE MAPS</span>
 		</span>
@@ -1008,7 +1002,7 @@ Jl. Babakan Rancamanyar No.22a Rancamanyar</span>		</div>
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-58f2589 wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="58f2589" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default">14</span>		</div>
+			<span class="elementor-heading-title elementor-size-default" day2></span>		</div>
 				</div>
 						</div>
 					</div>
@@ -1018,8 +1012,7 @@ Jl. Babakan Rancamanyar No.22a Rancamanyar</span>		</div>
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-5fdfe3f wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="5fdfe3f" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;zoomIn&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default">Minggu<br>
-Mei <br>2023</span>		</div>
+			<span class="elementor-heading-title elementor-size-default" weekday_month_year2></span>		</div>
 				</div>
 						</div>
 					</div>
@@ -1041,7 +1034,7 @@ Mei <br>2023</span>		</div>
 							<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
 							<i aria-hidden="true" class="fas fa-clock"></i>						</span>
-										<span class="elementor-icon-list-text">11.00 WIB - 15.00 WIB</span>
+										<span class="elementor-icon-list-text" time2></span>
 									</li>
 						</ul>
 				</div>
@@ -1052,13 +1045,12 @@ Mei <br>2023</span>		</div>
 				</div>
 				<div class="elementor-element elementor-element-b66b1ec wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="b66b1ec" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;zoomIn&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default"><b>Gedung Resepsi Karya Mandiri</b> <br>
-Jl. Babakan Rancamanyar No.22a Rancamanyar</span>		</div>
+			<span class="elementor-heading-title elementor-size-default"><b venue2></b> <br><span address2></span></span>		</div>
 				</div>
 				<div class="elementor-element elementor-element-901d8b1 elementor-align-left elementor-mobile-align-left wdp-sticky-section-no elementor-widget elementor-widget-button" data-id="901d8b1" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;zoomIn&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a href="https://goo.gl/maps/K9ofSvBtr8arHWoX8" target="_blank" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-bounce-out" role="button">
+			<a href="" target="_blank" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-bounce-out" role="button" gmaps2>
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">GOOGLE MAPS</span>
 		</span>
@@ -1215,9 +1207,14 @@ Jl. Babakan Rancamanyar No.22a Rancamanyar</span>		</div>
         
     <div class='cui-wrap-submit cui-clearfix'><p class='form-submit'><span class="cui-hide">Do not change these fields following</span><input type="text" class="cui-hide" name="name" value="username"><input type="text" class="cui-hide" name="nombre" value=""><input type="text" class="cui-hide" name="form-cui" value=""><input type="button" class="cui-form-btn cui-cancel-btn" value="Cancel"><input name='submit' id='submit-73263' value='Send →' type='submit' /><input type='hidden' name='commentpress' value='true' /><input type='hidden' name='comment_post_ID' value='73263' id='comment_post_ID' />
 <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
-</p></div></form></div></div><!--.cui-container-form--></div><!--.cui-clearfix cui-relative--></div><!--.cui-wrap-form--><div id='cui-comment-status-73263'  class='cui-comment-status'></div><div id='cui-box' class='cui-box'>
-<ul id='cui-container-comment-73263' class='cui-container-comments cui-order-DESC  cui-has-15-comments cui-multiple-comments' data-order='DESC'></ul>
-</div><div class='cui-holder-73263 cui-holder'></div></div><!--.cui-wrap-comments--></div><!--.cui-wrapper-->            <style>
+</p></div></form></div></div><!--.cui-container-form--></div><!--.cui-clearfix cui-relative--></div><!--.cui-wrap-form--><div id='cui-comment-status-73263'  class='cui-comment-status'></div>
+<div id='cui-box' class='cui-box'>
+	<ul page-1 id='cui-container-comment-73263' class='cui-container-comments cui-order-DESC  cui-has-15-comments cui-multiple-comments' data-order='DESC'></ul>
+</div>
+<div class='cui-holder-73263 cui-holder' style="text-align: center; display: none;">
+	<a onclick="loadPrev()">&lt;&lt; Sebelumnya</a> | <a onclick="loadNext()">Selanjutnya >></a>
+</div>
+</div><!--.cui-wrap-comments--></div><!--.cui-wrapper-->            <style>
                 .cui-wrapper .cui-holder {
                     display: block !important;
                 }
@@ -1377,15 +1374,15 @@ transition : transform 0.34s ease;
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-5d01973 wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="5d01973" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default">BCA</p>		</div>
+			<p class="elementor-heading-title elementor-size-default" bank_acc1></p>		</div>
 				</div>
 				<div class="elementor-element elementor-element-3e85058 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="3e85058" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">7771949812</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default" bank_no1></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-5b151e7 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="5b151e7" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"> a/n Randi Eka Fajar</p>		</div>
+			<p class="elementor-heading-title elementor-size-default"> a/n <span bank_name1></span></p>		</div>
 				</div>
 				<div class="elementor-element elementor-element-cba1c35 elementor-align-center wdp-sticky-section-no elementor-widget elementor-widget-weddingpress-copy-text" data-id="cba1c35" data-element_type="widget" data-widget_type="weddingpress-copy-text.default">
 				<div class="elementor-widget-container">
@@ -1394,7 +1391,7 @@ transition : transform 0.34s ease;
 
 		<div class="head-title"></div>
 		<div class="elementor-button-wrapper">
-						<div class="copy-content spancontent" style="display: none;">7771949812</div>
+						<div class="copy-content spancontent" style="display: none;" bank_no1></div>
 				
 			<a style="cursor:pointer;" onclick="copyText(this)" data-message="Copy Succes" class="elementor-button" role="button">
 				
@@ -1458,15 +1455,15 @@ transition : transform 0.34s ease;
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-49d74d8 wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="49d74d8" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default">Mandiri</p>		</div>
+			<p class="elementor-heading-title elementor-size-default" bank_acc2></p>		</div>
 				</div>
 				<div class="elementor-element elementor-element-9bd955b wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="9bd955b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">1300021224467</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default" bank_no2></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-97d2948 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="97d2948" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"> a/n Devi Arianti</p>		</div>
+			<p class="elementor-heading-title elementor-size-default"> a/n <span bank_name2></span></p>		</div>
 				</div>
 				<div class="elementor-element elementor-element-69018ec elementor-align-center wdp-sticky-section-no elementor-widget elementor-widget-weddingpress-copy-text" data-id="69018ec" data-element_type="widget" data-widget_type="weddingpress-copy-text.default">
 				<div class="elementor-widget-container">
@@ -1475,7 +1472,7 @@ transition : transform 0.34s ease;
 
 		<div class="head-title"></div>
 		<div class="elementor-button-wrapper">
-						<div class="copy-content spancontent" style="display: none;">1300021224467</div>
+						<div class="copy-content spancontent" style="display: none;" bank_no2></div>
 				
 			<a style="cursor:pointer;" onclick="copyText(this)" data-message="Copy Succes" class="elementor-button" role="button">
 				
@@ -1577,7 +1574,7 @@ transition : transform 0.34s ease;
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-c47374e wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="c47374e" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default">Devi & <br>Randi</p>		</div>
+			<p class="elementor-heading-title elementor-size-default" title2></p>		</div>
 				</div>
 				<div class="elementor-element elementor-element-7defcd2 wdp-sticky-section-no elementor-widget elementor-widget-image" data-id="7defcd2" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
@@ -1864,7 +1861,7 @@ transition : transform 0.34s ease;
 				</div>
 				<div class="elementor-element elementor-element-a4e92f1 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="a4e92f1" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_delay&quot;:500}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default">Devi & Randi</p>		</div>
+			<p class="elementor-heading-title elementor-size-default" title></p>		</div>
 				</div>
 						</div>
 					</div>
@@ -2033,12 +2030,107 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 </script>
 
 <script>
-	window.addCommentEntry = function(row) {
+	
+const data = {
+
+	nama1: `Devi`,
+	nama_long1: `Devi Arianti`,
+	putri_dari: `Bapak Mimin Sadimin dan Ibu Sumarni`,
+	ig1: `deviariantiiiiii`,
+
+	nama2: `Randi`,
+	nama_long2: `Randi Eka Fajar`,
+	putra_dari: `Bapak Ayi Dadan dan Ibu Imas Tutih`,
+	ig2: `randi_efajar`,
+
+	date: `Minggu, 30 Juni 2020`,
+	datetime: `Jun 1, 2023 20:34:41`,
+	
+	// AKAD
+	date1: `Minggu 30 Juni 2020`,
+	time1: `08.00 WIB - 11.00 WIB`,
+	venue1: `Gedung Resepsi Karya Mandiri`,
+	address1: `Jl. Babakan Rancamanyar No.22a Rancamanyar`,
+	gmaps1: `https://goo.gl/maps/K9ofSvBtr8arHWoX8`,
+
+	// RESEPSI
+	date2: `Minggu 30 Juni 2020`,
+	time2: `08.00 WIB - 11.00 WIB`,
+	venue2: `Gedung Resepsi Karya Mandiri`,
+	address2: `Jl. Babakan Rancamanyar No.22a Rancamanyar`,
+	gmaps2: `https://goo.gl/maps/K9ofSvBtr8arHWoX8`,
+
+	bank_acc1: `BCA`,
+	bank_no1: `123456789`,
+	bank_name1: `Randi Eka Fajar`,
+
+	bank_acc2: `BCA`,
+	bank_no2: `123456789`,
+	bank_name2: `Devi Arianti`,
+
+
+
+	///////////////////
+	key: `akbarp`,
+	comments_page: 1,
+	per_page: 30,
+	max_page: 1,
+};
+
+(function() {
+	function setContents() {
+		document.querySelectorAll('[title]').forEach(el => el.innerHTML = `${data.nama1} & ${data.nama2}`)
+		document.querySelector('[title2]').innerHTML = `${data.nama1} & <br>${data.nama2}`
+
+		document.querySelector('[title_short1]').innerHTML = data.nama1.slice(0,1)
+		document.querySelector('[title_short2]').innerHTML = data.nama2.slice(0,1)
+
+		document.querySelector('[nama_long1]').innerHTML = data.nama_long1
+		document.querySelector('[putri_dari]').innerHTML = data.putri_dari
+		document.querySelector('[ig1]').innerHTML = `${data.ig1} →`
+		document.querySelector('[ig1]').closest('a').href = `https://instagram.com/${data.ig1}`
+
+		document.querySelector('[nama_long2]').innerHTML = data.nama_long2
+		document.querySelector('[putra_dari]').innerHTML = data.putra_dari
+		document.querySelector('[ig2]').innerHTML = `${data.ig2} →`
+		document.querySelector('[ig2]').closest('a').href = `https://instagram.com/${data.ig2}`
+
+		document.querySelectorAll('[date]').forEach(el => el.innerHTML = data.date)
+
+		// AKAD
+		const _date = data.date1.split(' ')
+		document.querySelector('[day]').innerHTML = _date[1]
+		document.querySelector('[weekday_month_year]').innerHTML = `${ _date[0] }<br>${ _date[2] }<br>${ _date[3] }`
+		document.querySelector('[time]').innerHTML = data.time1
+		document.querySelector('[venue]').innerHTML = data.venue1
+		document.querySelector('[address]').innerHTML = data.address1
+		document.querySelector('[gmaps]').href = data.gmaps1
+
+		const _date2 = data.date2.split(' ')
+		document.querySelector('[day2]').innerHTML = _date2[1]
+		document.querySelector('[weekday_month_year2]').innerHTML = `${ _date2[0] }<br>${ _date2[2] }<br>${ _date2[3] }`
+		document.querySelector('[time2]').innerHTML = data.time2
+		document.querySelector('[venue2]').innerHTML = data.venue2
+		document.querySelector('[address2]').innerHTML = data.address2
+		document.querySelector('[gmaps2]').href = data.gmaps2
+
+		document.querySelector('[bank_acc1]').innerHTML = data.bank_acc1
+		document.querySelectorAll('[bank_no1]').forEach(el => el.innerHTML = data.bank_no1)
+		document.querySelector('[bank_name1]').innerHTML = data.bank_name1
+
+		document.querySelector('[bank_acc2]').innerHTML = data.bank_acc2
+		document.querySelectorAll('[bank_no2]').forEach(el => el.innerHTML = data.bank_no2)
+		document.querySelector('[bank_name2]').innerHTML = data.bank_name2
+	}
+
+	const base_url = `https://yusee.fly.dev`;
+	const _fetch = (u, o={}) => fetch(`${base_url}${u}&s=${data.key}`, o).then(r => r.json())
+
+	function addCommentEntry(row, page) {
 		const li = document.createElement('li')
 		li.className ="comment even thread-even depth-1 cui-item-comment";
-		document.querySelector('#cui-container-comment-73263').append(li)
-		document.querySelector('#cui-container-comment-73263').style.display = 'block' // show comments
-		document.querySelector('#cui-comment-status-73263').style.display = 'none' // hide loading
+		page.append(li)
+		page.style.display = 'block' // show comments
 
 		let date = new Date(row.created_at)
 		date.setUTCHours(date.getUTCHours() + 7)
@@ -2089,19 +2181,89 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 			</div><!--.cui-comment-->`;
 	}
 
-	addEventListener('DOMContentLoaded', e => { setTimeout(_=> {
+	window.loadPrev = function() {
+		if (data.comments_page == 1) return
+		const p = data.comments_page - 1
+
+		document.querySelector(`[page-${data.comments_page}]`).style.display = 'none'
+		document.querySelector(`[page-${p}]`).style.display = 'block'
+		data.comments_page--
+	}
+
+	window.loadNext = function() {
+		let p = data.comments_page + 1
+		let next_2_page = document.querySelector(`[page-${p + 1}]`)
+		let cui_box = document.querySelector('#cui-box')
+
+		if (next_2_page) {
+			document.querySelector(`[page-${data.comments_page}]`).style.display = 'none'
+			document.querySelector(`[page-${p}]`).style.display = 'block'
+			data.comments_page++
+		}
+		else {
+			let current = document.querySelector(`[page-${data.comments_page}]`)
+			let next = document.querySelector(`[page-${p}]`)
+			p = (next || (current.childElementCount == data.per_page)) ? p : data.comments_page
+
+			_fetch(`/site/get-comments?page=${p}`).then(rows => {
+				if (next) {
+					document.querySelector(`[page-${data.comments_page}]`).style.display = 'none'
+					current = next;
+					data.comments_page++;
+				}
+				else if (current.childElementCount == data.per_page) {
+					current = document.createElement('ul')
+					current.setAttribute(`page-${p}`, true)
+					current.className = 'cui-container-comments'
+					cui_box.append(current)
+					document.querySelector(`[page-${data.comments_page}]`).style.display = 'none'
+					data.max_page++
+					data.comments_page++
+				}
+
+				current.innerHTML = '';
+				rows.map(row => addCommentEntry(row, current))
+			});
+		}
+
+		cui_box.scrollTo({top:cui_box.scrollHeight, behavior:'smooth'})
+	}
+
+	function getCurrentTimestamp() {
+		let date = new Date()
+		let m = date.getUTCMonth() + 1
+		let d = date.getUTCDate()
+		let h = date.getUTCHours()
+
+		if (m < 10) m = '0'+m;
+		if (d < 10) d = '0'+d;
+		if (h < 10) h = '0'+h;
+
+		return ''+ date.getFullYear() +'-'+ m +'-'+ d +'T'+ h + date.toString().slice(18,24) +'Z'
+	}
+
+	addEventListener('DOMContentLoaded', e => { setTimeout(async _=> {
+		setContents()
+
 		let qs = new URLSearchParams(location.search)
 		let btn, title, alamat, nama = qs.get('to')
 
 		if (nama) {
-			title = '<?= $invite['title'] ?? 'Bapak/Ibu/Saudara/i' ?>'
-			alamat = '<?= $invite['alamat'] ?? 'Tempat' ?>'
+			const invite = await _fetch(`/site/get-invite?nama=${nama}`)
+			title = invite.title || 'Bapak/Ibu/Saudara/i'
+			alamat = invite.alamat || 'Tempat'
 		}
+
 		document.querySelector('#titletamu').innerHTML = title
 		document.querySelector('#namatamu').innerHTML = nama
 		document.querySelector('#alamat').innerHTML = `di ${alamat}.`
 
-		fetch('<?= Url::base() ?>/site/get-comments').then(r => r.json()).then(data => data.map(addCommentEntry));
+		_fetch('/site/get-comments?').then(rows => {
+			const page = document.querySelector('[page-1]')
+			document.querySelector('#cui-comment-status-73263').style.display = 'none' // hide loading
+			rows.map(row => addCommentEntry(row, page))
+			rows.length == 30 && (document.querySelector(`.cui-holder-73263`).style.display = 'block')
+		});
 
 		(btn = document.querySelector('#submit-comment')).addEventListener('click', e => {
 			e.preventDefault()
@@ -2117,20 +2279,19 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 
 			document.querySelector('.elementor-field-group-jumlahhadir').style.display = 'none'
 
-			return !fetch('<?= Url::base() ?>/site/post-comment', {
+			return !_fetch('/site/post-comment?', {
 				headers: {'content-type': 'application/x-www-form-urlencoded'},
 				body: 'body='+ body, method: 'post',
 			})
-			.then(r => r.json()).then(data => {
-				let date = new Date()
-				let m = date.getUTCMonth() + 1
-				let d = date.getUTCDate()
-				let h = date.getUTCHours()
-				if (m < 10) m = '0'+m;
-				if (d < 10) d = '0'+d;
-				if (h < 10) h = '0'+h;
-				const created_at = ''+ date.getFullYear() +'-'+ m +'-'+ d +'T'+ h + date.toString().slice(18,24) +'Z'
-				addCommentEntry({created_at, body})
+			.then(entry => {
+				const created_at = getCurrentTimestamp()
+				const page = document.querySelector(`page-${data.max_page}`)
+				document.querySelector(`[page-${data.comments_page}]`).style.display = 'none'
+				addCommentEntry({created_at, body}, page)
+				data.comments_page = data.max_page
+
+				const cui_box = document.querySelector('#cui-box')
+				cui_box.scrollTo({top:cui_box.scrollHeight, behavior:'smooth'})
 			})
 			.finally(_ => {
 				btn.disabled = false
@@ -2138,11 +2299,11 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 			})
 		})
 	}, 3000) })
-</script>
+})()</script>
 
+
+<script src="js/countdown.js" type="text/javascript"></script>
 <script type='text/javascript' src='js/frontend.min7d4c.js?ver=1.7.0' id='wpforms-elementor-js'></script>
 <div class="pafe-break-point" data-pafe-break-point-md="768" data-pafe-break-point-lg="1025" data-pafe-ajax-url="https://ruanginvitation.id/wp-admin/admin-ajax.php"></div><div data-pafe-form-builder-tinymce-upload="https://ruanginvitation.id/wp-content/plugins/piotnet-addons-for-elementor-pro/inc/tinymce/tinymce-upload.php"></div><div data-pafe-ajax-url="https://ruanginvitation.id/wp-admin/admin-ajax.php"></div>
 </body>
-
-<!-- Mirrored from ruanginvitation.id/ri12-spesial/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Apr 2023 21:14:55 GMT -->
 </html>
